@@ -1,0 +1,220 @@
+
+body{
+	margin: 0;
+	padding: 0;
+	background: #1E3F39 url('../img/seaBattle.jpg');
+	background-repeat: repeat;
+	background-size: auto;
+	background-position: center top;
+	background-attachment: fixed; 
+}
+h1{
+	font-family: sans-serif;
+	font-style: italic;
+	padding-top: 15px;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+/* 	font-weight: 900; */
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #345678;
+	text-shadow: 1px 1px 6px black;
+}
+
+.wrap{
+	position: relative;
+	display: block;
+/* 	background-color: #BADA55; */
+	width: 900px;
+	height: 550px;
+	margin: 10px auto;
+	overflow: hidden;
+	background-color: rgba(248, 248, 255, 0.76);
+	
+}
+.myPlate, .animyPlate{
+	position: relative;
+	top: 75px;
+	float: left;
+	width: 300px;
+	height: 300px;
+	background-color: #f8f8ff;
+	border: 3px solid rgba(0, 7, 150, 0.42);
+	margin-left: 75px;
+	opacity: 0.3;
+}
+.table{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 150px;
+	margin-top: 400px;
+	background-color: rgba(255, 0, 0, 0.39);
+}
+.myPlate::before, .animyPlate::before{
+	content: 'А Б В Г Д Е Ж З И К';
+	position: absolute;
+	font-family: monospace;
+	font-size: 24px;
+	line-height: 1;
+	width: 100%;
+	
+	text-align: center;
+	top: -30px;
+	letter-spacing: 1px;
+	color: #000796;
+}
+.myPlate::after, .animyPlate::after{
+	content: '1 2 3 4 5 6 7 8 9 10';
+	position: absolute;
+	display: block;
+	font-family: monospace;
+	font-size: 26px;
+	line-height: 1.18;
+	width: 30px;
+	height: 100%;
+	left: -40px;
+	top: 0px;
+	cursor: default;
+	text-align: right;
+	color: #000796;
+	letter-spacing: 1px;
+}
+.myPlate{
+	margin-right: 75px;	
+}
+.animyPlate:hover {
+	cursor: pointer;
+}
+
+.tShip {
+	transition: all 0.1s;
+}
+.tShip:hover{
+	fill: rgba(233,233,233,0.4);
+	cursor: pointer;
+}
+.tShip:active{
+	fill: rgba(233,233,233,0.9);
+}
+.text:hover {
+	cursor: default;
+}
+
+.hide {
+	visibility: hidden;
+	opacity: 0;
+}
+.visible{
+	transition: all 1.8s ;
+	visibility: visible;
+	opacity: 1;
+}
+
+.go {
+	
+	transition: all 0.4s;
+}
+.nextStep{
+	fill: rgba(255,255,255,0.6);
+	font-family: sans-serif;
+	font-size: 28px;
+	font-weight: 100;
+}
+.nextStepMessage{
+	fill: rgba(255,255,255,0.9);
+	font-family: georgia;
+	font-size: 30px;
+	font-weight: 100;
+
+	opacity: 0;
+}
+.finalyMessage {
+	fill: rgba(255,255,255,0.9);
+	font-family: georgia;
+	font-size: 36px;
+	font-weight: 100;
+}
+.flash {
+	-webkit-animation: flash .3s 0.1s 4;
+	-moz-animation: flash .3s 0.1s 4; /* Fx 5+ */
+  -o-animation: flash .3s 0.1s 4; /* Opera 12+ */
+  animation: flash .3s 0.1s 4;
+}
+.te:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+.ar {
+	-webkit-animation: mymove 0.6s infinite;
+	-moz-animation: mymove 0.6s infinite; /* Fx 5+ */
+  -o-animation: mymove 0.6s infinite; /* Opera 12+ */
+  animation: mymove 0.6s infinite;
+}
+
+
+/* Chrome, Safari, Opera */ 
+@-webkit-keyframes mymove {
+    0% {-webkit-transform: scale(1);}
+    50% {-webkit-transform: scale(1.01);}
+    100% {-webkit-transform: scale(1);}
+} 
+
+/* Standard syntax */ 
+@keyframes mymove {
+     0% {transform: scale(1);}
+    50% {transform: scale(1.01);}
+    100% {transform: scale(1);}
+}
+
+@-moz-keyframes mymove {
+    0% {-moz-transform: scale(1);}
+    50% {-moz-transform: scale(1.01);}
+    100% {-moz-transform: scale(1);}
+} 
+@-o-keyframes mymove {
+    0% {-o-transform: scale(1);}
+    50% {-o-transform: scale(1.01);}
+    100% {-o-transform: scale(1);}
+} 
+
+
+/* Chrome, Safari, Opera */ 
+@-webkit-keyframes flash {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+} 
+
+/* Standard syntax */ 
+@keyframes flash {
+    0% {opacity: 0}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@-moz-keyframes flash {
+    0% {opacity: 0}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+} 
+@-o-keyframes flash {
+    0% {opacity: 0}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+} 
+ 
+.showPlate{
+	transition: opacity 0.8s;
+	opacity: 1;
+}
+.showMess{
+	transition: opacity 0.6s;
+	opacity: 1;
+}
+.hideMess{
+	transition: opacity 0.6s;
+	opacity: 0;
+}
+
+
