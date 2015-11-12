@@ -1463,41 +1463,7 @@ $(document).ready(function(){
 			});
 	
 	}
-	
 	var seaBattle = new GameSB();
-	
-/*
-	$('.myPlate').children('svg').click(function(e) {
-		if (e.target.tagName === 'rect'){
-			var el =$(e.target);
-			var size;
-			if (parseInt(el.attr('width')) > parseInt(el.attr('height')) ) {
-				size = parseInt(el.attr('width'))/30;		
-			} else if (parseInt(el.attr('width')) < parseInt(el.attr('height')) ) {
-				size = parseInt(el.attr('height'))/30;		
-			} else {
-				size = parseInt(el.attr('width'))/30;		
-			};
-			if (size === 1){
-				myShips.uno = myShips.uno + 1;
-			}
-			if (size === 2){
-				myShips.duo = myShips.duo + 1;
-			}
-			if (size === 3){
-				myShips.trio = myShips.trio + 1;
-			}
-			if (size === 4){
-				myShips.quatro = myShips.quatro + 1;
-			}
-			
-			el.remove();
-			table.display(myShips.display());
-		}
-	});
-*/
-
-
 });
 
 	
